@@ -1,0 +1,23 @@
+{
+    "name": "foxy3555/pop-it-mvc",
+    "description": "Simple mvc freamework",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Semen Burtovoy",
+            "email": "sema12301@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    
+    "require": {
+        "php": "^7.4 | ^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Src\\": "core/Src/",
+            "": "app/"
+        }
+    }
+}
