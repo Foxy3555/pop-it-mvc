@@ -4,5 +4,8 @@
     <label>Имя <input type="text" name="name"></label>
     <label>Логин <input type="text" name="login"></label>
     <label>Пароль <input type="password" name="password"></label>
+    <select name="name_role" id="name_role" hidden="hidden">
+            <option value="Библиотекарь"></option>
+    </select>
     <button>Зарегистрироваться</button>
 </form>

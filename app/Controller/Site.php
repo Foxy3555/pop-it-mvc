@@ -7,6 +7,9 @@ use Src\View;
 use Src\Request;
 use Model\User;
 use Src\Auth\Auth;
+use Model\Book;
+use Model\Reader;
+
 
 class Site
 {
@@ -24,7 +27,7 @@ class Site
     public function signup(Request $request): string
     {
         if ($request->method === 'POST' && User::create($request->all())) {
-            app()->route->redirect('/go');
+            app()->route->redirect('/hello');
         }
         return new View('site.signup');
     }
@@ -49,5 +52,28 @@ class Site
         app()->route->redirect('/hello');
     }
 
+    public function add_book(Request $request): string
+    {
+        if ($request->method === 'POST' && Book::create($request->all())) {
+            app()->route->redirect('/hello');
+        }
+        return new View('site.add_book');
+    }
+
+    public function add_reader(Request $request): string
+    {
+        if ($request->method === 'POST' && Reader::create($request->all())) {
+            app()->route->redirect('/hello');
+        }
+        return new View('site.add_reader');
+    }
+
+    public function add_lib(Request $request): string
+    {
+        if ($request->method === 'POST' && User::create($request->all())) {
+            app()->route->redirect('/hello');
+        }
+        return new View('site.add_lib');
+    }
 
 }
