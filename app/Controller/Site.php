@@ -76,4 +76,16 @@ class Site
         return new View('site.add_lib');
     }
 
+    public function show_book(): string
+    {
+        $selectedBooks = $_POST['books'] ?? [];
+        if (!empty($selectedBooks)) {
+            $books = Book::whereIn('name', $selectedBooks)->get();
+        } else {
+            $books = Book::all();
+        }
+
+        return new View('site.show_book', ['books' => $books]);
+    }
+
 }

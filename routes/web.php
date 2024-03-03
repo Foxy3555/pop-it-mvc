@@ -10,3 +10,5 @@ Route::add('GET', '/logout', [Controller\Site::class, 'logout']);
 Route::add(['GET', 'POST'], '/addbook', [Controller\Site::class, 'add_book']);
 Route::add(['GET', 'POST'], '/addreader', [Controller\Site::class, 'add_reader']);
 Route::add(['GET', 'POST'], '/addlib', [Controller\Site::class, 'add_lib']);
+Route::add(['GET', 'POST'], '/book', [Controller\Site::class, 'show_book']);
+Route::add(['GET', 'POST'], '/book_index', [Controller\Site::class, 'book_index']);
